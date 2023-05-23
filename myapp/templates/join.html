@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>加入会议</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='join.css') }}" type="text/css">
+</head>
+<body>
+    <h2 class="join">{{ meetingName }}</h2>
+    <form class="join" action="{{ url_for('join', tempUuid=tempUuid) }}" method="post">
+        <input type="text" class="join" name="member-name" placeholder="输入成员名称"><br>
+        <button type="submit" class="join" value="">加入</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新建会议</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='initial.css') }}" type="text/css">
+</head>
+<body>
+    <form class="initial" action="{{ url_for('submitForm') }}" method="post">
+        <input type="text" class="initial" name="meeting-name" placeholder="输入会议名称"><br>
+        <input type="text" class="initial" name="member-name" placeholder="输入成员名称"><br>
+        <button class="initial">提交</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='meeting.css') }}" type="text/css">
+    <title>会议室</title>
+</head>
+<body>
+    <div>
+        <a href="{{ url_for('leave', id=tempUuid) }}" class="meeting">Leave</a>
+        <div class="member-list">
+            <h4>成员列表</h4>
+            <ul>
+                {% for member in meetingMember %}
+                <li>{{ member }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <h3 class="chat-content">{{ meetingName }}</h3>
+        <div class="chat-content">
+            {% if message %}
+                {% for mes in message %}
+                    {% if mes[0] == memberName%}
+                        <p class="self"><strong>{{mes[0]}}</strong> : {{ mes[1] }}</p>
+                    {% else %}
+                        <p class="other"><strong>{{mes[0]}}</strong> : {{ mes[1] }}</p>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+        </div>
+        <form action="{{ url_for('chat', id=tempUuid) }}" method="post" class="chat-content">
+            <input type="text" name="mes" placeholder="输入聊天内容" class="chat-content" required>
+            <button class="chat-content" type="submit">提交</button>
+        </form>
+    </div>
+</body>
+</html>

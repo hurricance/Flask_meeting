@@ -1,0 +1,29 @@
+h2.join {
+    margin: auto;
+    text-align: center;
+    margin-top: 100px;
+}
+
+input.join {
+    border: 5px solid black;
+    width: 300px;
+    height: 50px;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+form.join {
+    margin: auto;
+    text-align: center;
+}
+
+button.join {
+    border: 5px solid black;
+    margin-top: 2%;
+    margin-left: 17%;
+    background-color: yellowgreen;
+    width: 100px;
+    height: 40px;
+    font-size: 20px;
+}
