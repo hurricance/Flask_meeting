@@ -1,5 +1,5 @@
-###Web前端开发技术 - 期末大作业
-####项目目录如下
+### Web前端开发技术 - 期末大作业
+#### 项目目录如下
 ```
 .
 ├── __pycache__
@@ -14,7 +14,7 @@
     ├── join.html
     └── meeting.html
 ```
-####html源代码
+#### html源代码
 新建会议界面 meeting.html
 ```
 <!DOCTYPE html>
@@ -101,7 +101,7 @@
 ```
 效果如下:
 ![pic](./img/3.png)
-####css代码
+#### css代码
 initial.css
 ```
 form.initial {
@@ -247,7 +247,7 @@ p.other {
     background-color: greenyellow;
 }
 ```
-####python代码
+#### python代码
 <span>app.py<span>
 ```
 from flask import Flask, render_template, url_for, request, redirect, make_response
@@ -322,7 +322,7 @@ if __name__ == '__main__':
     app.run(debug=True)
 ```
 ---
-####代码说明
+#### 代码说明
 > 本次实验使用Flask后端框架 + jinja2模板引擎
 
 在用户创建新会议后, 通过向后端提交表单信息, 后台生成会议对应的uuid并把相关信息存储在全局变量meetings中, 同时给用户的cookie中新增键值对{uuid: username}, 然后用户被重定向到会议界面, 会议界面会显示用户输入的会议名称
